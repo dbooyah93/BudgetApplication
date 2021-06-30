@@ -11,7 +11,7 @@ class App extends React.Component {
               <div class="card-body">
                 <div class="row">
                   <div class="col-4"></div>
-                  <div class="col-4">
+                  <div class="col-4 text-center">
                     <h1>Hello General Sarai</h1>
                   </div>
                   <div class="col-4"></div>
