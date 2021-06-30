@@ -7,7 +7,12 @@ class App extends React.Component {
   render() {
       return (
         <div>
-            <h1>Hello General Sarai</h1>
+                <div class="row">
+                  <div class="col-4">
+                    <h1>Hello General Sarai</h1>
+                  </div>
+                  <div class="col-4"></div>
+                </div>
         </div>
       )
   }
