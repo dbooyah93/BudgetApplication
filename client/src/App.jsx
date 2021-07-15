@@ -14,7 +14,6 @@ class App extends React.Component {
   /** exampleFunction(){} */
 
   render() {
-    let date = new Date();
       return (
         <div>
           <div class="card">
