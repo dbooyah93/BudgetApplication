@@ -1,25 +1,28 @@
 import React from 'react';
+import { render } from 'react-dom';
 
-const InsertLine = () => {
+/* {for (const [key, value] of Object.entries(expenses)) {
     return (
-        <tr>
-            <th scope="row">
-                <input type="text" placeholder="Expense"></input>
-            </th>
-            <td> {new Date().toLocaleString() + ""}</td>
-            <td>
-                <input type="text" placeholder="Cost"></input>
-            </td>
-            <td>
-                <select type="select">
-                    <option value="Gasoline">Gasoline</option>
-                    <option value="cat">Cat</option>
-                    <option value="Groceries">Groceries</option>
-                </select>
-            </td>
-            <td>
-            </td>
-        </tr>
+        <th scope="row">{key}</th>
+        <td>
+            <InsertLine value={value}/>
+        </td>
+        
+    )
+}} */
+
+const InsertLine = (props) => {
+    let definitions = Object.keys(props.expenses);
+    let details = Object.values(props.expenses);
+    console.log(props.expenses);
+    return (
+        <div>
+            {definitions.map( (def, index) => {
+                return(
+                    <th scope="row">{def}</th>
+                )
+            })}
+        </div>
     )
 }
 

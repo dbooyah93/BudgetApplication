@@ -2,19 +2,23 @@ import React from 'react';
 import InsertLine from './InsertLine.jsx';
 
 const SpreadSheet = (props) => {
+    const expenses = props.expenses;
+    const list = [];
+
     return(
         <div>
             <table className="table">
                 <thead>
                     <tr>
-                    <th scope="col">Exnse</th>
-                    <th scope="col">Date Purchased</th>
-                    <th scope="col">Cost</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Remaining</th>
+                        <th scope="col">Expense</th>
+                        <th scope="col">Date Purchased</th>
+                        <th scope="col">Cost</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Remaining</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <InsertLine expenses={props.expenses}/>
                     <tr>
                         <th scope="row">Cat Litter</th>
                         <td>Tuesday 07/06/2021</td>
@@ -36,7 +40,6 @@ const SpreadSheet = (props) => {
                         <td>Gasoline</td>
                         <td>$114.52</td>
                     </tr>
-                    <InsertLine/>
                 </tbody>
             </table>
         </div>
