@@ -2,9 +2,9 @@ import React from 'react';
 import InsertLine from './InsertLine.jsx';
 
 const SpreadSheet = (props) => {
-    const expenses = props.expenses;
+    const expenses = Object.entries(props.expenses);
     const list = [];
-
+    console.log(Object.entries(props.expenses))
     return(
         <div>
             <table className="table">
@@ -18,7 +18,15 @@ const SpreadSheet = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <InsertLine expenses={props.expenses}/>
+                    {           
+                        expenses.map ( ( expense, index ) => {
+                            let definition = expense[ 0 ]; 
+                            let info = expense[ 1 ];
+                            return (
+                                <InsertLine expense={definition} info={info}/>
+                            )
+                        })
+                    }
                     <tr>
                         <th scope="row">Cat Litter</th>
                         <td>Tuesday 07/06/2021</td>
