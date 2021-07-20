@@ -51,7 +51,6 @@ class App extends React.Component {
                 <div className="col-4"></div>
                 <div className="col-4 text-center">
                   <h1>Financial Saving Solution</h1>
-                  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
                 </div>
                 <div className="col-4"></div>
               </div>
