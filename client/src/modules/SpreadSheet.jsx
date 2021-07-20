@@ -1,10 +1,11 @@
 import React from 'react';
 import InsertLine from './InsertLine.jsx';
 
-const SpreadSheet = () => {
+const SpreadSheet = (props) => {
+    console.log(categories);
     return(
         <div>
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
                     <th scope="col">Expense</th>
