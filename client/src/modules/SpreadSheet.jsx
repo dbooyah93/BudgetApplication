@@ -1,9 +1,21 @@
 import React from 'react';
 import InsertLine from './InsertLine.jsx';
-
+// I'd like to focus this file into becoming a "Service" portion of a "service pattern" MVC
 const SpreadSheet = (props) => {
     const expenses = Object.entries(props.expenses);
     const list = [];
+    // this is not scalablevvv
+    let remaining = props.map( ( props.budget, ( alocation, index ) => {
+        return alocation - expenses[index][1];
+    }));
+    // calculateRemaining f () has to be on the parent component
+    // the remaining variable will derive initially from the remaining database
+        // (SQL)
+        // (id, userId, categoryId, remaining)
+    //calculateRemaining
+        // find the new remaining amount for category[id]
+        // update the internal memory and
+        // make axios request to update database
     console.log(Object.entries(props.expenses))
     return(
         <div>
@@ -23,31 +35,10 @@ const SpreadSheet = (props) => {
                             let definition = expense[ 0 ]; 
                             let info = expense[ 1 ];
                             return (
-                                <InsertLine expense={definition} info={info}/>
+                                <InsertLine expense={definition} info={info} remaining={0}/>
                             )
                         })
                     }
-                    <tr>
-                        <th scope="row">Cat Litter</th>
-                        <td>Tuesday 07/06/2021</td>
-                        <td>$22.04</td>
-                        <td>Cats</td>
-                        <td>$72.96</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Mecardo Fresco Meat and produce</th>
-                        <td>Tuesday 07/06/2021</td>
-                        <td>$155.48</td>
-                        <td>Groceries</td>
-                        <td>$134.52</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Premium 11.1 Gallons</th>
-                        <td>Tuesday 07/06/2021</td>
-                        <td>$33.48</td>
-                        <td>Gasoline</td>
-                        <td>$114.52</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
